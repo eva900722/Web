@@ -1,270 +1,210 @@
 /* ========= Reset 預設重設 ========= */
 * {
     margin: 0;
-    /* 去除預設外邊距 */
+    /* 移除所有元素的外邊距 */
     padding: 0;
-    /* 去除預設內邊距 */
+    /* 移除所有元素的內邊距 */
     box-sizing: border-box;
-    /* 使用 border-box 模型 */
+    /* 設定 box-sizing 為 border-box，使寬高包含 padding 與 border */
 }
 
 /* ========= 全域設定 ========= */
 body {
     font-family: "Segoe UI", sans-serif;
-    /* 設定字型 */
+    /* 設定全站字型 */
     background: #f4f4f4;
-    /* 背景顏色 */
+    /* 設定網頁背景色 */
     color: #333;
-    /* 文字顏色 */
+    /* 預設文字顏色 */
 }
 
+/* ========= 主容器設定 ========= */
 .container {
     width: 90%;
-    /* 寬度為畫面90% */
+    /* 寬度為畫面的 90% */
     max-width: 1200px;
-    /* 最大寬度限制 */
+    /* 最大寬度限制為 1200px */
     margin: auto;
     /* 水平置中 */
     display: flex;
     /* 使用 Flex 排版 */
     justify-content: space-between;
-    /* 左右對齊 */
+    /* 子項目左右對齊 */
     align-items: center;
     /* 垂直置中 */
     flex-wrap: wrap;
-    /* 允許換行 */
+    /* 允許子項目自動換行 */
 }
 
-/* ========= 導覽列 ========= */
+/* ========= 導覽列主體 ========= */
 .navbar {
     background: #002244;
-    /* 深藍背景 */
+    /* 深藍色背景 */
     color: #fff;
-    /* 白字 */
+    /* 白色文字 */
     padding: 15px 0;
-    /* 上下內距 */
+    /* 上下內邊距 */
     width: 100%;
     /* 滿版寬度 */
 }
 
+/* ========= 導覽列內部容器 ========= */
 .navbar .container {
     position: relative;
-    /* ✅ 漢堡定位的關鍵 */
+    /* 為漢堡選單定位提供基準 */
     width: 100%;
+    /* 寬度滿版 */
     max-width: 100%;
+    /* 不限制最大寬度 */
     margin: 0 auto;
+    /* 水平置中 */
     display: flex;
+    /* 使用 Flex 排列內容 */
     justify-content: space-between;
+    /* 左右貼齊對齊 */
     align-items: center;
+    /* 垂直置中對齊 */
     padding: 0;
-    /* 移除左右內距 */
+    /* 移除內距 */
 }
 
+/* ========= Logo 區塊 ========= */
 .navbar .logo {
     font-size: 24px;
     /* 字體大小 */
     font-weight: bold;
-    /* 粗體 */
+    /* 字體加粗 */
     color: white;
-    /* 白字 */
+    /* 白色文字 */
     margin-left: 60px;
-    /* 保持靠左但不設負值 */
+    /* 靠左內距 */
 }
 
+/* ========= 導覽連結容器 ========= */
 .navbar nav .nav-links {
     list-style: none;
-    /* 移除點點 */
+    /* 移除清單點點 */
     display: flex;
     /* 水平排列 */
     gap: 20px;
-    /* 項目間距（保留） */
+    /* 項目之間的間距 */
     padding-right: 60px;
-    /* 右側留空 */
+    /* 靠右內距 */
     flex-wrap: wrap;
-    /* 換行 */
+    /* 項目可換行 */
 }
 
+/* ========= 導覽項目（li）設定 ========= */
 .navbar .nav-links li {
     padding-left: 10px;
-    /* 左邊距 */
+    /* 左內距 */
     padding-right: 10px;
-    /* 右邊距 */
+    /* 右內距 */
 }
 
+/* ========= 導覽超連結樣式 ========= */
 .navbar .nav-links li a {
     color: white;
     /* 白色文字 */
     text-decoration: none;
-    /* 無底線 */
+    /* 移除底線 */
     font-weight: 500;
-    /* 中等粗細 */
+    /* 中等字重 */
     font-size: 18px;
     /* 字體大小 */
     transition: color 0.3s;
-    /* 過渡效果 */
+    /* 滑鼠懸停時顏色變化過渡效果 */
 }
 
+/* ========= 懸停變色效果 ========= */
 .navbar .nav-links li a:hover {
     color: #00bfff;
-    /* 懸停變色 */
+    /* 懸停時變成亮藍色 */
 }
 
-/* ========= 內容區塊 ========= */
-/* 內容區塊樣式：內邊距與背景色設定 */
-.content {
-    padding: 40px 0;
-    /* 設定上下內邊距 */
-    background: white;
-    /* 設定背景顏色為白色 */
-}
-
-/* 內容區塊容器：垂直排列、間距 */
-.content .container {
-    display: flex;
-    /* 使用彈性排版 */
-    flex-direction: column;
-    /* 設定為縱向排列 */
-    gap: 20px;
-    /* 設定子元素間的間距 */
-}
-
-/* 標題樣式 */
-.content h1 {
-    font-size: 28px;
-    /* 設定字體大小 */
-    color: #333;
-    /* 設定文字顏色 */
-}
-
-/* 段落樣式 */
-.content p {
-    font-size: 18px;
-    /* 設定字體大小 */
-    color: #666;
-    /* 設定文字顏色 */
-}
-
-/* ========= 版權區塊 ========= */
-.copyright {
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    font-size: 14px;
-    padding: 12px 0;
-    border-top: 1px solid #ddd;
-}
-
-/* ========= 響應式設計 ========= */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        /* 導覽列也直排 */
-        align-items: flex-start;
-        position: relative;
-        /* 讓 menu-toggle 以這個區塊為基準定位 */
-    }
-
-    .navbar nav .nav-links {
-        flex-direction: column;
-        /* 導覽連結改為縱向排列 */
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .categories .container {
-        flex-direction: column;
-    }
-
-    .category {
-        flex: 1 1 100%;
-    }
-
-    .contact-map {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .contact-map-embed {
-        left: 0;
-        /* 響應式移除偏移 */
-    }
-}
-
-/* ========= 漢堡選單樣式 ========= */
+/* ========= 響應式：漢堡選單按鈕 ========= */
 .menu-toggle {
     display: none;
+    /* 預設隱藏（僅手機版顯示） */
     font-size: 32px;
+    /* 字體大小 */
     color: white;
+    /* 白色圖示 */
     cursor: pointer;
+    /* 游標變成手型 */
     padding: 10px 20px;
+    /* 內距 */
     position: absolute;
-    /* 修正錯誤拼字，並固定在畫面上 */
+    /* 絕對定位於右上角 */
     right: 0;
-    /* 貼齊畫面最右邊 */
+    /* 靠右對齊 */
     top: 50%;
     /* 垂直置中 */
     transform: translateY(-50%);
+    /* 垂直平移置中 */
     z-index: 1001;
+    /* 層級高於選單本體 */
     background: transparent;
+    /* 背景透明 */
 }
 
-
+/* ========= 桌面版選單顯示（預設） ========= */
 .menu {
     display: block;
-    /* 預設 menu（導覽列）正常顯示，桌面版使用 */
+    /* 導覽選單預設為顯示 */
 }
 
-/* ========= 手機版響應式設定 ========= */
+/* ========= 響應式設計：手機版樣式 ========= */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        /* 當螢幕寬度 ≤ 768px 時，顯示漢堡按鈕 */
+        /* 顯示漢堡按鈕 */
     }
 
     .menu {
         position: absolute;
-        /* 固定位置，不會隨頁面滾動 */
+        /* 絕對定位 */
         top: 0;
-        /* 從畫面頂端開始 */
+        /* 貼齊頂部 */
         right: -300px;
-        /* 初始隱藏在右側畫面外（負值） */
+        /* 隱藏在畫面右邊外 */
         width: 200px;
-        /* 設定滑出選單的寬度 */
+        /* 選單寬度 */
         height: 100vh;
-        /* 高度設為整個螢幕 */
+        /* 高度為整個螢幕 */
         background-color: #002244;
-        /* 選單背景色（深藍） */
+        /* 深藍背景 */
         padding-top: 60px;
-        /* 上方留白，避免蓋到 Logo 或按鈕 */
-        transition: right 0.3s ease;
-        /* 滑入/滑出動畫效果 */
+        /* 上方留空，避免蓋到 Logo */
+        transition: right 0.3s;
+        /* 開關動畫 */
         z-index: 1000;
-        /* 層級略低於漢堡按鈕 */
+        /* 層級低於 menu-toggle */
     }
 
     .menu.open {
         right: 0;
-        /* 加上 .open class 時，選單滑出顯示 */
+        /* 加上 open 類別時滑出選單 */
     }
 
     .nav-links {
         flex-direction: column;
-        /* 導覽列項目改為縱向排列 */
+        /* 導覽項目改為直排 */
         gap: 20px;
-        /* 每個項目的垂直間距 */
+        /* 項目間距 */
         padding: 0 20px;
-        /* 左右內邊距，避免文字貼邊 */
+        /* 左右內距 */
     }
 
     .nav-links li {
         padding: 10px 0;
-        /* 每個選項上下內距，增加可點擊區域 */
+        /* 上下內距 */
     }
 
     .navbar .container {
         flex-direction: row;
-        /* 導覽列主容器維持橫向排列 */
+        /* 導覽主容器仍橫排 */
         justify-content: space-between;
-        /* 左右兩端對齊 */
+        /* 左右對齊 */
     }
 }
