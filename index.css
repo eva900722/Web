@@ -341,7 +341,7 @@ footer {
     /* 設定內邊距，讓按鈕點擊範圍大一點 */
     position: fixed;
     /* 使用絕對定位，以固定在畫面右上角 */
-    right: 30px;
+    right: 5px;
     /* 距離右邊 20px */
     top: 15px;
     /* 距離上方 15px */
