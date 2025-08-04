@@ -339,9 +339,9 @@ footer {
     /* 滑鼠懸停時顯示為手型指標 */
     padding: 10px 20px;
     /* 設定內邊距，讓按鈕點擊範圍大一點 */
-    position: absolute;
+    position: fixed;
     /* 使用絕對定位，以固定在畫面右上角 */
-    right: 5px;
+    right: 20px;
     /* 距離右邊 20px */
     top: 15px;
     /* 距離上方 15px */
