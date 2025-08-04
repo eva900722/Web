@@ -313,3 +313,85 @@ footer {
         /* 響應式移除偏移 */
     }
 }
+
+/* ========= 漢堡選單樣式 ========= */
+.menu-toggle {
+    display: none;
+    /* 預設為隱藏，只有手機版才會顯示 */
+    font-size: 28px;
+    /* 設定漢堡圖示的字體大小（☰） */
+    color: white;
+    /* 漢堡圖示顏色為白色 */
+    cursor: pointer;
+    /* 滑鼠懸停時顯示為手型指標 */
+    padding: 10px 20px;
+    /* 設定內邊距，讓按鈕點擊範圍大一點 */
+    position: absolute;
+    /* 使用絕對定位，以固定在畫面右上角 */
+    right: 20px;
+    /* 距離右邊 20px */
+    top: 15px;
+    /* 距離上方 15px */
+    z-index: 1001;
+    /* 設定層級，確保按鈕位於最上方 */
+}
+
+.menu {
+    display: block;
+    /* 預設 menu（導覽列）正常顯示，桌面版使用 */
+}
+
+/* ========= 手機版響應式設定 ========= */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* 當螢幕寬度 ≤ 768px 時，顯示漢堡按鈕 */
+    }
+
+    .menu {
+        position: fixed;
+        /* 固定位置，不會隨頁面滾動 */
+        top: 0;
+        /* 從畫面頂端開始 */
+        right: -250px;
+        /* 初始隱藏在右側畫面外（負值） */
+        width: 250px;
+        /* 設定滑出選單的寬度 */
+        height: 100vh;
+        /* 高度設為整個螢幕 */
+        background-color: #002244;
+        /* 選單背景色（深藍） */
+        padding-top: 60px;
+        /* 上方留白，避免蓋到 Logo 或按鈕 */
+        transition: right 0.3s ease;
+        /* 滑入/滑出動畫效果 */
+        z-index: 1000;
+        /* 層級略低於漢堡按鈕 */
+    }
+
+    .menu.open {
+        right: 0;
+        /* 加上 .open class 時，選單滑出顯示 */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* 導覽列項目改為縱向排列 */
+        gap: 20px;
+        /* 每個項目的垂直間距 */
+        padding: 0 20px;
+        /* 左右內邊距，避免文字貼邊 */
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        /* 每個選項上下內距，增加可點擊區域 */
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        /* 導覽列主容器維持橫向排列 */
+        justify-content: space-between;
+        /* 左右兩端對齊 */
+    }
+}

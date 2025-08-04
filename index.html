@@ -24,7 +24,9 @@
                 <img src="images/LOGOW3.png" alt="公司Logo" style="height:60px; vertical-align: middle;">
             </div>
 
-            <nav> <!-- 開始導航區域 -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- ← 這行放在這裡 -->
+
+            <nav class="menu"> <!-- 開始導航區域 -->
                 <ul class="nav-links"> <!-- 設定導航連結列表 -->
                     <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
                     <li><a href="engineering achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
@@ -32,8 +34,10 @@
                     <li><a href="about us.html">關於我們</a></li> <!-- 關於我們連結 -->
                 </ul>
             </nav>
+
         </div>
     </header>
+
 
     <!-- 輪播圖區塊 -->
     <section class="carousel"> <!-- 設定輪播圖區塊 -->
@@ -155,5 +159,13 @@
     </script>
 
 </body>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open'); // 點一下切換 open class
+    }
+</script>
+
 
 </html>
