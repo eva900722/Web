@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- 頁面編碼與響應式設定 -->
+    <meta charset="UTF-8" /> <!-- 設定頁面的字符編碼為 UTF-8，支持中文字符 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 設定頁面為響應式，適應不同螢幕大小 -->
+
+    <!-- 網頁標題 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png">
+    <title>贊耀資訊有限公司</title> <!-- 設定網頁標題為 "贊耀電腦" -->
+
+    <!-- 連結至 index.css -->
+    <link rel="stylesheet" href="index.css" /> <!-- 引入外部 CSS 樣式表 -->
+</head>
+
+<body>
+
+    <!-- 導覽列（網站頂部） -->
+    <header class="navbar"> <!-- 設定導航列的區塊 -->
+        <div class="container"> <!-- 主要容器 -->
+
+            <div class="logo">
+                <img src="images/LOGOW3.png" alt="公司Logo" style="height:60px; vertical-align: middle;">
+            </div>
+
+            <nav> <!-- 開始導航區域 -->
+                <ul class="nav-links"> <!-- 設定導航連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 輪播圖區塊 -->
+    <section class="carousel"> <!-- 設定輪播圖區塊 -->
+        <div class="carousel-container"> <!-- 內部容器，包裹所有的圖片 -->
+            <div class="slide active"> <!-- 當前顯示的投影片，加入 active 類別 -->
+                <img src="images/title.png" alt="科技圖1"> <!-- 第一張圖片 -->
+            </div>
+            <div class="slide"> <!-- 第二張圖片 -->
+                <img src="images/introduction.jpg" alt="科技圖2">
+            </div>
+            <div class="slide"> <!-- 第三張圖片 -->
+                <img src="images/logos.jpg" alt="科技圖3">
+            </div>
+        </div>
+
+        <!-- 左右控制箭頭 -->
+        <button class="arrow left-arrow" onclick="prevSlide()">❮</button> <!-- 左箭頭 -->
+        <button class="arrow right-arrow" onclick="nextSlide()">❯</button> <!-- 右箭頭 -->
+    </section>
+
+    <!-- 產品分類展示區 -->
+    <section class="categories"> <!-- 設定產品分類區塊 -->
+        <div class="container"> <!-- 主要容器 -->
+
+            <div class="category"> <!-- 單一產品分類 -->
+                <a href="network.html">
+                    <img src="images/internet.png" alt="網管設備" /> <!-- 顯示網管設備圖片 -->
+                    <h3>網管設備</h3> <!-- 顯示分類名稱 -->
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="private cloud.html">
+                    <img src="images/private.jpg" alt="私有雲端" />
+                    <h3>私有雲端</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="server.html">
+                    <img src="images/server.jpg" alt="伺服器" />
+                    <h3>伺服器</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="software systems.html">
+                    <img src="images/erp.png" alt="企業軟體系統" />
+                    <h3>企業軟體系統</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="weak ennginner.html">
+                    <img src="images/ip.png" alt="弱電工程" />
+                    <h3>弱電工程</h3>
+                </a>
+            </div>
+
+            <div class="category">
+                <a href="computer.html">
+                    <img src="images/computer.jpg" alt="電腦設備" />
+                    <h3>電腦設備</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾區塊 -->
+    <footer class="footer-info"> <!-- 設定頁尾資訊區塊 -->
+        <div class="container contact-map"> <!-- 設定聯絡資訊與地圖區塊容器 -->
+            <div class="contact-text"> <!-- 聯絡資訊欄 -->
+                <h3>聯絡我們</h3> <!-- 聯絡標題 -->
+                <p>公司名稱：贊耀資訊有限公司 ZanYao</p> <!-- 公司名稱 -->
+                <p>電話：02-2608-0925</p> <!-- 電話 -->
+                <p>Email：service@zanyao.com.tw</p> <!-- Email -->
+                <p>地址：新北市林口區文化二路一段68巷31號1樓</p> <!-- 公司地址 -->
+            </div>
+
+            <!-- 添加 Line QR Code 圖片 -->
+            <div class="line-qr">
+                <img src="images/line qrcod.jpg" alt="Line QR Code" width="300" height="300">
+                <!-- 替換 path-to-your-qr-code.jpg 為實際的 QR Code 圖片路徑 -->
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.970144211824!2d121.36427087595708!3d25.069001036880195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7b0bfa19b8b%3A0x62c68378f54fbb2f!2z6LSK6ICA6LOH6KiKIC3pgLHlha3poJDntITliLYo5LyB5qWt6LOH5a6J57ay566h5qmf5oi_6Zu76IWm562G6Zu76Zuy56uv5Ly65pyN5Zmo6Luf6auU5byx6Zu757at6K23Luizh-ioiuioreWCmeS-m-aHieWVhi7oqo3orYnlt6XnqIvluKsp!5e0!3m2!1szh-TW!2stw!4v1754199715638!5m2!1szh-TW!2stw"
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- 嵌入 Google 地圖 -->
+        </div>
+    </footer>
+
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留。 <!-- 版權文字 -->
+    </div>
+
+    <!-- 輪播控制用 JavaScript -->
+    <script>
+        let currentIndex = 0; // 記錄當前顯示的投影片索引
+        const slides = document.querySelectorAll('.slide'); // 獲取所有輪播圖片
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => { // 遍歷每個投影片
+                slide.classList.remove('active'); // 移除所有圖片的 active 類別
+                if (i === index) { // 當前圖片與索引匹配時
+                    slide.classList.add('active'); // 添加 active 類別以顯示當前圖片
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length; // 顯示下一張圖片，循環回到第一張
+            showSlide(currentIndex); // 顯示對應索引的圖片
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // 顯示上一張圖片，循環回到最後一張
+            showSlide(currentIndex); // 顯示對應索引的圖片
+        }
+    </script>
+
+</body>
+
+</html>
