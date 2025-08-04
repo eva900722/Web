@@ -294,6 +294,8 @@ footer {
         flex-direction: column;
         /* 導覽列也直排 */
         align-items: flex-start;
+        position: relative;
+        /* 讓 menu-toggle 以這個區塊為基準定位 */
     }
 
     .navbar nav .nav-links {
@@ -336,7 +338,7 @@ footer {
     /* 上下內距為 10px，左右內距為 20px，增加點擊區域 */
     position: absolute;
     /* 絕對定位，讓它相對於最近的有 position 的父元素定位（此處是 .navbar .container） */
-    right: 60px;
+    right: 5px;
     /* 漢堡圖與右側邊距保持 20px 的距離 */
     top: 50%;
     /* 讓圖示頂部對齊容器的垂直中心點 */
