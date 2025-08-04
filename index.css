@@ -290,13 +290,6 @@ footer {
 
 /* ========= 響應式設計 ========= */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        /* 小螢幕改為直排 */
-        align-items: flex-start;
-        /* 靠左對齊 */
-    }
-
     .navbar .container {
         flex-direction: column;
         /* 導覽列也直排 */
