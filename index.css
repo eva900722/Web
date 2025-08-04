@@ -336,9 +336,9 @@ footer {
     /* 滑鼠移到漢堡圖示上時，游標變成手指形狀，表示可點擊 */
     padding: 10px 20px;
     /* 上下內距為 10px，左右內距為 20px，增加點擊區域 */
-    position: absolute;
+    position: fiexd;
     /* 絕對定位，讓它相對於最近的有 position 的父元素定位（此處是 .navbar .container） */
-    right: 5px;
+    right: 100px;
     /* 漢堡圖與右側邊距保持 20px 的距離 */
     top: 50%;
     /* 讓圖示頂部對齊容器的垂直中心點 */
