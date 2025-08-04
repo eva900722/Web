@@ -48,6 +48,8 @@ body {
 }
 
 .navbar .container {
+    position: relative;
+    /* ✅ 漢堡定位的關鍵 */
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -154,17 +156,12 @@ body {
 
 /* ========= 響應式設計 ========= */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        /* 小螢幕改為直排 */
-        align-items: flex-start;
-        /* 靠左對齊 */
-    }
-
     .navbar .container {
         flex-direction: column;
         /* 導覽列也直排 */
         align-items: flex-start;
+        position: relative;
+        /* 讓 menu-toggle 以這個區塊為基準定位 */
     }
 
     .navbar nav .nav-links {
@@ -196,24 +193,21 @@ body {
 /* ========= 漢堡選單樣式 ========= */
 .menu-toggle {
     display: none;
-    /* 預設為隱藏，只有手機版才會顯示 */
-    font-size: 28px;
-    /* 設定漢堡圖示的字體大小（☰） */
+    font-size: 32px;
     color: white;
-    /* 漢堡圖示顏色為白色 */
     cursor: pointer;
-    /* 滑鼠懸停時顯示為手型指標 */
     padding: 10px 20px;
-    /* 設定內邊距，讓按鈕點擊範圍大一點 */
     position: absolute;
-    /* 使用絕對定位，以固定在畫面右上角 */
-    right: 20px;
-    /* 距離右邊 20px */
-    top: 15px;
-    /* 距離上方 15px */
+    /* 修正錯誤拼字，並固定在畫面上 */
+    right: 0;
+    /* 貼齊畫面最右邊 */
+    top: 50%;
+    /* 垂直置中 */
+    transform: translateY(-50%);
     z-index: 1001;
-    /* 設定層級，確保按鈕位於最上方 */
+    background: transparent;
 }
+
 
 .menu {
     display: block;
@@ -228,13 +222,13 @@ body {
     }
 
     .menu {
-        position: fixed;
+        position: absolute;
         /* 固定位置，不會隨頁面滾動 */
         top: 0;
         /* 從畫面頂端開始 */
-        right: -250px;
+        right: -300px;
         /* 初始隱藏在右側畫面外（負值） */
-        width: 250px;
+        width: 200px;
         /* 設定滑出選單的寬度 */
         height: 100vh;
         /* 高度設為整個螢幕 */
