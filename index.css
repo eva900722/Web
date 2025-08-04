@@ -1,395 +1,315 @@
 /* ========= Reset 預設重設 ========= */
 * {
     margin: 0;
-    /* 去除元素的預設外邊距 */
+    /* 去除預設外邊距 */
     padding: 0;
-    /* 去除元素的預設內邊距 */
+    /* 去除預設內邊距 */
     box-sizing: border-box;
-    /* 設置盒模型為 border-box，讓寬度和高度包含內邊距和邊框 */
+    /* 使用 border-box 模型 */
 }
 
 /* ========= 全域設定 ========= */
 body {
     font-family: "Segoe UI", sans-serif;
-    /* 設定網頁字體 */
+    /* 設定字型 */
     background: #f4f4f4;
-    /* 設定背景顏色 */
+    /* 背景顏色 */
     color: #333;
-    /* 設定文字顏色 */
+    /* 文字顏色 */
 }
 
-/* 設定主要容器的寬度與排版方式 */
 .container {
     width: 90%;
-    /* 設定容器的寬度為視窗的 90% */
+    /* 寬度為畫面90% */
     max-width: 1200px;
-    /* 設定容器的最大寬度為 1200px */
+    /* 最大寬度限制 */
     margin: auto;
-    /* 自動對齊容器，讓其在父元素中居中 */
+    /* 水平置中 */
     display: flex;
-    /* 使用彈性排版 */
+    /* 使用 Flex 排版 */
     justify-content: space-between;
-    /* 讓 Logo 和 nav-links 兩端對齊 */
-    align-items: center;
-    /* 垂直置中子元素 */
-}
-
-/* ========= 導覽列區塊 ========= */
-.navbar {
-    background: #002244;
-    color: #fff;
-    padding: 15px 0;
-    display: flex;
-    /* 使用彈性排版 */
-    justify-content: flex-start;
-    /* 讓 Logo 靠左 */
+    /* 左右對齊 */
     align-items: center;
     /* 垂直置中 */
+    flex-wrap: wrap;
+    /* 允許換行 */
 }
 
-/* 網站 Logo 樣式 */
+/* ========= 導覽列 ========= */
+.navbar {
+    background: #002244;
+    /* 深藍背景 */
+    color: #fff;
+    /* 白字 */
+    padding: 15px 0;
+    /* 上下內距 */
+    width: 100%;
+    /* 滿版寬度 */
+}
+
+.navbar .container {
+    justify-content: space-between;
+    /* 左右分散對齊 */
+}
+
 .navbar .logo {
     font-size: 24px;
+    /* 字體大小 */
     font-weight: bold;
+    /* 粗體 */
     color: white;
-    margin-left: -200PX;
-    /* 確保 Logo 靠左，保持不動 */
+    /* 白字 */
+    margin-left: 20px;
+    /* 保持靠左但不設負值 */
 }
 
-
-/* 導覽連結外層容器：橫向排列、間距 */
 .navbar nav .nav-links {
     list-style: none;
-    /* 去除列表項目預設的圓點 */
+    /* 移除點點 */
     display: flex;
-    /* 使用彈性排版，讓項目在一行顯示 */
+    /* 水平排列 */
     gap: 20px;
-    /* 設定每個項目之間的間距 */
-    position: relative;
-    left: 200px;
-    /* 將元素向右移動 10px */
-
+    /* 項目間距（保留） */
+    padding-right: 20px;
+    /* 右側留空 */
+    flex-wrap: wrap;
+    /* 換行 */
 }
 
-/* 每個導覽項目的樣式 */
 .navbar .nav-links li {
     padding-left: 10px;
-    /* 設定每個項目的左邊距 */
+    /* 左邊距 */
     padding-right: 10px;
-    /* 設定每個項目的右邊距 */
+    /* 右邊距 */
 }
 
-/* 導覽連結樣式 */
 .navbar .nav-links li a {
     color: white;
-    /* 設定連結文字顏色為白色 */
+    /* 白色文字 */
     text-decoration: none;
-    /* 去除下劃線 */
+    /* 無底線 */
     font-weight: 500;
-    /* 設定字體粗細 */
+    /* 中等粗細 */
     font-size: 18px;
-    /* 調整文字大小 */
+    /* 字體大小 */
     transition: color 0.3s;
-    /* 設定顏色變換的過渡效果 */
+    /* 過渡效果 */
 }
 
-/* 滑鼠懸停時變色 */
 .navbar .nav-links li a:hover {
     color: #00bfff;
-    /* 設定懸停時的顏色 */
+    /* 懸停變色 */
 }
 
 /* ========= 輪播圖區塊 ========= */
 .carousel {
     width: 100%;
-    /* 設定輪播圖容器的寬度 */
+    /* 滿版寬度 */
     height: 400px;
-    /* 設定輪播圖容器的高度 */
+    /* 固定高度 */
     overflow: hidden;
-    /* 隱藏超出範圍的內容 */
+    /* 隱藏溢出內容 */
     position: relative;
-    /* 設定定位 */
+    /* 相對定位 */
 }
 
 .carousel-container {
     width: 100%;
-    /* 設定容器寬度 */
     height: 100%;
-    /* 設定容器高度 */
     position: relative;
-    /* 設定定位 */
 }
 
 .slide {
     width: 100%;
-    /* 設定每張圖片的寬度為容器的 100% */
     height: 100%;
-    /* 設定每張圖片的高度為容器的 100% */
     position: absolute;
-    /* 設定絕對定位 */
     opacity: 0;
-    /* 設定透明度為 0，初始狀態為不可見 */
     transition: opacity 1s ease-in-out;
-    /* 設定透明度變化的過渡效果 */
 }
 
 .slide.active {
     opacity: 1;
-    /* 設定當前顯示的圖片透明度為 1 */
     z-index: 1;
-    /* 設定層級，使其在最上層 */
 }
 
 .slide img {
     width: 100%;
-    /* 設定圖片寬度為容器的 100% */
     height: 100%;
-    /* 設定圖片高度為容器的 100% */
     object-fit: cover;
-    /* 讓圖片按照容器比例裁切 */
 }
 
-/* ========= 輪播圖箭頭按鈕 ========= */
+/* ========= 輪播圖箭頭 ========= */
 .arrow {
     position: absolute;
-    /* 設定絕對定位 */
     top: 50%;
-    /* 垂直置中 */
     transform: translateY(-50%);
-    /* 使箭頭完全置中 */
     background-color: rgba(0, 0, 0, 0.5);
-    /* 設定背景為半透明黑 */
     color: white;
-    /* 設定文字顏色為白色 */
     font-size: 2rem;
-    /* 設定字體大小 */
     padding: 10px 15px;
-    /* 設定內邊距 */
     border: none;
-    /* 去除邊框 */
     cursor: pointer;
-    /* 設定鼠標樣式為指針 */
     z-index: 2;
-    /* 設定層級，使其在圖片之上 */
     border-radius: 4px;
-    /* 設定圓角 */
     transition: background-color 0.3s ease;
-    /* 設定背景色變化的過渡效果 */
 }
 
 .arrow:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    /* 設定懸停時背景顏色加深 */
 }
 
 .left-arrow {
     left: 10px;
-    /* 設定左側箭頭位置 */
 }
 
 .right-arrow {
     right: 10px;
-    /* 設定右側箭頭位置 */
 }
 
 /* ========= 產品分類區塊 ========= */
 .categories {
     padding: 40px 0;
-    /* 設定上下內邊距 */
     background: white;
-    /* 設定背景顏色為白色 */
 }
 
 .categories .container {
     display: flex;
-    /* 使用彈性排版 */
     justify-content: space-between;
-    /* 設定每個元素之間的間距 */
     flex-wrap: wrap;
-    /* 讓元素換行 */
     gap: 20px;
-    /* 設定元素之間的間距 */
 }
 
 .category {
     flex: 1 1 30%;
-    /* 設定每個分類區塊的寬度，並且允許其根據容器大小調整 */
     background: #eaeaea;
-    /* 設定背景顏色 */
     padding: 20px;
-    /* 設定內邊距 */
     border-radius: 8px;
-    /* 設定圓角 */
     text-align: center;
-    /* 文字置中 */
 }
 
 .category img {
     width: 100%;
-    /* 設定圖片寬度為分類區塊的 100% */
     height: 200px;
-    /* 設定圖片高度為 200px */
     object-fit: cover;
-    /* 讓圖片根據區塊比例裁切 */
     border-radius: 6px;
-    /* 設定圓角 */
     margin-top: 10px;
-    /* 設定圖片的上邊距 */
 }
 
 .category a {
     text-decoration: none;
-    /* 去除下劃線 */
     color: inherit;
-    /* 繼承父元素顏色 */
     display: block;
-    /* 使連結區塊變為塊級元素 */
 }
 
 .category a:hover h3 {
     color: #007bff;
-    /* 設定懸停時文字顏色 */
     text-decoration: underline;
-    /* 設定懸停時加底線 */
 }
 
 /* ========= 頁尾區塊 ========= */
 footer {
     background: #222;
-    /* 設定頁尾背景顏色 */
     color: white;
-    /* 設定頁尾文字顏色 */
     text-align: left;
-    /* 文字置中 */
     padding: 20px;
-    /* 設定內邊距 */
     margin-top: 30px;
-    /* 設定與上方內容的距離 */
 }
 
 .footer-info {
     background: #111;
-    /* 設定頁尾信息區域背景顏色 */
     color: #fff;
-    /* 設定文字顏色 */
-    padding: 20px 20px;
-    /* 設定內邊距 */
-    margin-top: 0;
-    /* 去除上邊距 */
-    border-top: none;
-    /* 去除上邊框 */
+    padding: 20px;
 }
 
 /* ========= 聯絡資訊 + 地圖區塊 ========= */
 .contact-map {
     display: flex;
-    /* 使用彈性排版 */
     flex-wrap: wrap;
-    /* 設定換行 */
     justify-content: space-between;
-    /* 讓子元素兩端對齊 */
-    align-items: right;
-    /* 垂直置中子元素 */
     gap: 30px;
-    /* 設定元素之間的間距 */
+    align-items: flex-start;
 }
 
 .contact-text {
     flex: 1 1 300px;
-    /* 設定元素的寬度為 300px */
     min-width: 250px;
-    /* 設定最小寬度 */
 }
 
 .contact-text h3 {
     margin-bottom: 15px;
-    /* 設定標題下邊距 */
     font-size: 22px;
-    /* 設定字體大小 */
     color: #fff;
-    /* 設定文字顏色 */
 }
 
 .contact-text p {
     margin-bottom: 8px;
-    /* 設定文字底邊距 */
     font-size: 18px;
-    /* 設定字體大小 */
     color: #ccc;
-    /* 設定顏色 */
 }
 
 .contact-map-embed {
-    position: relative;
-    left: 1000px;
-    /* 將元素向右移動 200px */
     flex: 1 1 300px;
     min-width: 300px;
     max-width: 400px;
+    position: relative;
+    left: 0;
+    /* 修正原本錯誤的 left: 1000px */
 }
 
 .contact-map-embed iframe {
     width: 100%;
-    /* 設定地圖寬度為 100% */
     aspect-ratio: 1 / 1;
-    /* 設定為正方形 */
     border: 0;
-    /* 去除邊框 */
     border-radius: 8px;
-    /* 設定圓角 */
 }
 
 /* ========= 版權區塊 ========= */
 .copyright {
     background-color: #fff;
-    /* 設定背景顏色 */
     color: #333;
-    /* 設定文字顏色 */
     text-align: center;
-    /* 文字置中 */
     font-size: 14px;
-    /* 設定字體大小 */
     padding: 12px 0;
-    /* 設定內邊距 */
     border-top: 1px solid #ddd;
-    /* 設定上邊框 */
 }
 
 /* ========= 響應式設計 ========= */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        /* 小螢幕時，容器改為縱向排列 */
+        /* 小螢幕改為直排 */
         align-items: flex-start;
-        /* 元素對齊左邊 */
+        /* 靠左對齊 */
     }
 
-    .navbar .nav-links {
+    .navbar .container {
         flex-direction: column;
-        /* 導覽列變為縱向排列 */
+        /* 導覽列也直排 */
         align-items: flex-start;
-        /* 導覽列對齊左邊 */
+    }
+
+    .navbar nav .nav-links {
+        flex-direction: column;
+        /* 導覽連結改為縱向排列 */
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .categories .container {
         flex-direction: column;
-        /* 產品分類縱向排列 */
     }
 
     .category {
         flex: 1 1 100%;
-        /* 每個分類佔滿全寬 */
     }
 
     .contact-map {
         flex-direction: column;
-        /* 聯絡資訊與地圖縱向排列 */
         align-items: flex-start;
-        /* 左邊對齊 */
     }
 
-    .contact-map-embed iframe {
-        aspect-ratio: 1 / 1;
-        /* 設定地圖為正方形 */
+    .contact-map-embed {
+        left: 0;
+        /* 響應式移除偏移 */
     }
 }
