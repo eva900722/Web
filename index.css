@@ -331,7 +331,7 @@ footer {
 .menu-toggle {
     display: none;
     /* 預設為隱藏，只有手機版才會顯示 */
-    font-size: 50px;
+    font-size: 32px;
     /* 設定漢堡圖示的字體大小（☰） */
     color: white;
     /* 漢堡圖示顏色為白色 */
