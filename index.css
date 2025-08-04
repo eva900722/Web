@@ -339,7 +339,7 @@ footer {
     /* 滑鼠懸停時顯示為手型指標，表示可以點擊 */
     padding: 10px 20px;
     /* 上下 10px、左右 20px 的內邊距，增大可點擊範圍 */
-    position: fixed;
+    position: absolute;
     /* 固定定位，讓漢堡圖固定在畫面上的某個位置，不隨捲動改變 */
     top: 15px;
     /* 距離畫面上方 15px */
