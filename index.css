@@ -48,6 +48,8 @@ body {
 }
 
 .navbar .container {
+    position: relative;
+    /* ✅ 漢堡定位的關鍵 */
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
