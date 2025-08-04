@@ -395,3 +395,28 @@ footer {
         /* 左右兩端對齊 */
     }
 }
+
+/* ========= 輪播圖響應式設計 ========= */
+@media (max-width: 768px) {
+    .carousel {
+        height: auto;
+        /* 手機上高度自動調整圖片比例 */
+        aspect-ratio: 16 / 9;
+        /* 保持寬高比 */
+    }
+
+    .slide img {
+        height: auto;
+        /* 手機上圖片高度自動 */
+        max-height: 100%;
+        object-fit: cover;
+        /* 保持填滿但不變形 */
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+        /* 手機上箭頭變小 */
+        padding: 8px 12px;
+        /* 箭頭按鈕縮小 */
+    }
+}
