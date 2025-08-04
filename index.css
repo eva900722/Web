@@ -331,7 +331,7 @@ footer {
     color: white;
     cursor: pointer;
     padding: 10px 20px;
-    position: fixed;
+    position: absolute;
     /* 修正錯誤拼字，並固定在畫面上 */
     right: 0;
     /* 貼齊畫面最右邊 */
