@@ -54,7 +54,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0; /* 移除左右內距 */
+    padding: 0;
+    /* 移除左右內距 */
 }
 
 .navbar .logo {
@@ -238,7 +239,14 @@ footer {
 .contact-text {
     flex: 1 1 300px;
     min-width: 250px;
+    text-align: left;
+    /* 文字置中 */
+    align-self: center;
+    /* 垂直置中對齊 */
+    padding-left: 100px;
+    /* 讓整段稍微往右一點 */
 }
+
 
 .contact-text h3 {
     margin-bottom: 15px;
@@ -258,7 +266,7 @@ footer {
     max-width: 400px;
     position: relative;
     left: 0;
-    /* 修正原本錯誤的 left: 1000px */
+
 }
 
 .contact-map-embed iframe {
@@ -358,9 +366,9 @@ footer {
         /* 固定位置，不會隨頁面滾動 */
         top: 0;
         /* 從畫面頂端開始 */
-        right: -250px;
+        right: -300px;
         /* 初始隱藏在右側畫面外（負值） */
-        width: 250px;
+        width: 200px;
         /* 設定滑出選單的寬度 */
         height: 100vh;
         /* 高度設為整個螢幕 */
