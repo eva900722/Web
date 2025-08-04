@@ -356,7 +356,7 @@ footer {
     }
 
     .menu {
-        position: fixed;
+        position: absolute;
         /* 固定位置，不會隨頁面滾動 */
         top: 0;
         /* 從畫面頂端開始 */
