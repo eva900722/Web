@@ -1,43 +1,53 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-TW"> <!-- 設定語言為繁體中文 -->
 
 <head>
-    <!-- 設定頁面字符編碼為UTF-8 -->
-    <meta charset="UTF-8"> <!-- 設定頁面編碼為UTF-8，支持中文字符 -->
-
-    <!-- 網頁標題 -->
-    <link rel="icon" href="images/LOGOB1.png" type="image/png">
-    <title>私有雲端介紹</title> <!-- 設定網頁標題為 "網管設備介紹" -->
-
-    <!-- 連結至 network.css -->
-    <link rel="stylesheet" href="private cloud.css"> <!-- 引入外部CSS樣式表，樣式將應用於此頁面 -->
+    <meta charset="UTF-8" /> <!-- 設定字符編碼為 UTF-8，支援中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 響應式設定，讓畫面適應不同裝置寬度 -->
+    <link rel="icon" href="images/LOGOB1.png" type="image/png"> <!-- 設定瀏覽器頁籤的小圖示（favicon） -->
+    <title>贊耀資訊有限公司</title> <!-- 設定頁面標題，顯示於瀏覽器頁籤 -->
+    <link rel="stylesheet" href="navigation bar.css" /> <!-- 引入外部 CSS 樣式表 -->
 </head>
 
-<body>
-   <!-- 導覽列（網站頂部） -->
-   <header class="navbar"> <!-- 設定導航列的區塊 -->
-    <div class="container"> <!-- 主要容器 -->
-        <div class="logo">
-            <img src="images/LOGOW3.png" alt="公司Logo" style="height:60px; vertical-align: middle;">
-        </div>
-        <nav> <!-- 開始導航區域 -->
-            <ul class="nav-links"> <!-- 設定導航連結列表 -->
-                <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
-                <li><a href="engineering achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
-                <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
-                <li><a href="about us.html">關於我們</a></li> <!-- 關於我們連結 -->
-            </ul>
-        </nav>
-    </div>
-</header>
-    <!-- 內容區塊 -->
-    <section class="content"> <!-- 設定網管設備介紹的內容區塊 -->
-        <div class="container"> <!-- 主要容器 -->
-            <h1>私有雲端介紹</h1> <!-- 顯示標題 -->
-            <p>這裡是您公司提供的私有雲端詳細介紹內容……</p> <!-- 顯示介紹內容 -->
-        </div>
-    </section>
+<body> <!-- 網頁主體開始 -->
 
-</body>
+    <!-- 導覽列區塊 -->
+    <header class="navbar"> <!-- 標頭區塊，含導覽列樣式 -->
+        <div class="container"> <!-- 主容器：控制寬度與內部排列 -->
 
-</html>
+            <div class="logo"> <!-- Logo 區塊 -->
+                <img src="images/LOGOW3.png" alt="公司Logo" style="height:60px; vertical-align: middle;">
+                <!-- 顯示公司 Logo 圖片 -->
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- 漢堡選單按鈕，手機版使用，點擊會呼叫 toggleMenu() 函式 -->
+
+            <nav class="menu"> <!-- 導覽列區塊 -->
+                <ul class="nav-links"> <!-- 導覽連結列表 -->
+                    <li><a href="index.html">首頁</a></li> <!-- 首頁連結 -->
+                    <li><a href="engineering achievements.html">工程事蹟</a></li> <!-- 工程事蹟連結 -->
+                    <li><a href="partner.html">合作夥伴</a></li> <!-- 合作夥伴連結 -->
+                    <li><a href="about us.html">關於我們</a></li> <!-- 關於我們連結 -->
+                </ul>
+            </nav>
+
+        </div> <!-- 結束 container -->
+    </header> <!-- 結束導覽列 -->
+
+    <!-- ✅ 第二頁內容區塊 -->
+    <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
+        <h1>這是第三分頁</h1> <!-- 標題 -->
+        <p>在這裡新增你自己的內容</p> <!-- 說明文字，可放自定內容 -->
+    </main>
+
+    <!-- JavaScript 區塊：控制漢堡選單開關 -->
+    <script>
+        function toggleMenu() { // 定義 toggleMenu 函式
+            const menu = document.querySelector('.menu'); // 選取 menu 元素
+            menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
+        }
+    </script>
+
+</body> <!-- 結束 body 區塊 -->
+
+</html> <!-- 結束 HTML 文件 -->
