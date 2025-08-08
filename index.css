@@ -602,6 +602,11 @@ footer {
         margin-top: 5px;
     }
 
+    .contact-map {
+        gap: 10px !important;
+        /* ✅ 原本是 50px，手機上太大了 */
+    }
+
     /* ✅ Google 地圖 iframe 區塊置中 */
     .contact-map-embed {
         width: 100%;
