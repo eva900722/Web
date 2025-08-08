@@ -595,7 +595,7 @@ footer {
     }
 
     .line-qr img {
-        width: 200px;
+        width: 300px;
         /* ✅ 直接指定寬度 */
         height: auto;
         /* ✅ 高度自動等比例 */
