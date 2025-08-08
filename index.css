@@ -586,8 +586,9 @@ footer {
         margin-bottom: 0px;
     }
 
-    .contact-map {
-        gap: 10px !important;
+    .contact-text {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .line-qr {
