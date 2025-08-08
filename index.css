@@ -267,6 +267,7 @@ body {
 .category {
     flex: 1 1 30%;
     /* 占 30% 寬度，可換行 */
+    margin: 10px;
     background: #eaeaea;
     /* 背景色 */
     padding: 20px;
@@ -502,7 +503,7 @@ footer {
         /* 從畫面頂部開始 */
         right: -300px;
         /* 初始隱藏於右側畫面外 */
-        width: 200px;
+        width: 70vw;
         /* 選單寬度 */
         height: 100vh;
         /* 滿版高度 */
@@ -548,6 +549,8 @@ footer {
     .carousel {
         height: auto;
         /* 高度自適應內容 */
+        overflow: hidden;
+        position: relative;
     }
 
     .carousel-container {
@@ -555,6 +558,8 @@ footer {
         /* 維持寬高比 16:9 */
         width: 100%;
         /* 滿寬度 */
+        height: auto;
+        position: relative;
     }
 
     .slide {
@@ -564,6 +569,8 @@ footer {
         /* 滿版寬度 */
         height: 100%;
         /* 滿版高度 */
+        top: 0;
+        left: 0;
     }
 
     .slide img {
