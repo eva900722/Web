@@ -116,6 +116,22 @@ body {
     /* 滑鼠懸停時顏色變化過渡效果 */
 }
 
+/* ========= 版權區塊 ========= */
+.copyright {
+    background-color: #fff;
+    /* 白底 */
+    color: #333;
+    /* 字色深灰 */
+    text-align: center;
+    /* 置中對齊 */
+    font-size: 14px;
+    /* 字體大小 */
+    padding: 12px 0;
+    /* 上下內距 */
+    border-top: 1px solid #ddd;
+    /* 上邊框 */
+}
+
 /* ========= 懸停變色效果 ========= */
 .navbar .nav-links li a:hover {
     color: #00bfff;

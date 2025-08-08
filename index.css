@@ -296,6 +296,43 @@ body {
     /* 與標題間距 */
 }
 
+/* 合作夥伴樣式 */
+.categories-partner {
+    padding: 40px 0;
+    /* 上下間距 */
+    background: white;
+    /* 白色背景 */
+}
+
+.categories-partner .container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+    /* 控制項目間距 */
+    justify-content: center;
+}
+
+.categories-partner .category {
+    width: 300px;
+    background: #eaeaea;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.categories-partner .category img {
+    width: 100%;
+    /* 圖片滿寬 */
+    height: 180px;
+    /* 固定高度 */
+    object-fit: contain;
+    /* 裁切填滿 */
+    border-radius: 6px;
+    /* 圓角 */
+    margin-top: 10px;
+    /* 與標題間距 */
+}
+
 .category a {
     text-decoration: none;
     /* 無底線 */
@@ -327,7 +364,7 @@ footer {
 }
 
 .footer-info {
-    background: #111;
+    background: #002244;
     /* 更深背景 */
     color: #fff;
     /* 白字 */
@@ -404,7 +441,6 @@ footer {
     /* 靠左 */
 }
 
-
 .contact-map-embed iframe {
     width: 100%;
     /* 滿寬 */
@@ -418,9 +454,9 @@ footer {
 
 /* ========= 版權區塊 ========= */
 .copyright {
-    background-color: #fff;
+    background-color: #000000;
     /* 白底 */
-    color: #333;
+    color: #ffffff;
     /* 字色深灰 */
     text-align: center;
     /* 置中對齊 */
@@ -428,8 +464,6 @@ footer {
     /* 字體大小 */
     padding: 12px 0;
     /* 上下內距 */
-    border-top: 1px solid #ddd;
-    /* 上邊框 */
 }
 
 /* ========= 響應式設計 ========= */
