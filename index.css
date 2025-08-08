@@ -507,6 +507,11 @@ footer {
         /* 顯示漢堡按鈕 */
     }
 
+    .navbar .logo {
+        margin-left: 15px !important;
+        /* 改小一點 */
+    }
+
     .menu {
         position: absolute;
         /* 固定選單位置 */
@@ -514,9 +519,9 @@ footer {
         /* 從畫面頂部開始 */
         right: -300px;
         /* 初始隱藏於右側畫面外 */
-        width: 70vw;
+        width: 60vw;
         /* 選單寬度 */
-        max-width: 300px;
+        max-width: 250px;
         height: 100vh;
         /* 滿版高度 */
         background-color: #002244;
