@@ -8,6 +8,11 @@
     /* 設定所有元素的盒模型為 border-box */
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 /* ========= 全域設定 ========= */
 body {
     font-family: "Segoe UI", sans-serif;
@@ -440,6 +445,12 @@ footer {
         /* 分類容器改為直向排列 */
     }
 
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
     .category {
         flex: 1 1 100%;
         /* 單列顯示每個分類卡片 */
@@ -505,6 +516,7 @@ footer {
         /* 初始隱藏於右側畫面外 */
         width: 70vw;
         /* 選單寬度 */
+        max-width: 300px;
         height: 100vh;
         /* 滿版高度 */
         background-color: #002244;
