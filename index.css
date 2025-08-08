@@ -599,7 +599,7 @@ footer {
         /* ✅ 直接指定寬度 */
         height: auto;
         /* ✅ 高度自動等比例 */
-        margin-top: -20px;
+        margin-top: 0px;
     }
 
     /* ✅ Google 地圖 iframe 區塊置中 */
