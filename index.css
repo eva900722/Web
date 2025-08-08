@@ -500,6 +500,13 @@ footer {
     /* 桌面版預設顯示選單 */
 }
 
+.contact-map-embed iframe {
+    width: 300px;
+    height: 300px;
+    border: 0;
+    border-radius: 0;
+}
+
 /* ========= 手機版響應式設定 ========= */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -580,13 +587,6 @@ footer {
         width: 100%;
         display: flex;
         justify-content: center;
-    }
-
-    .contact-map-embed iframe {
-        width: 90%;
-        max-width: 400px;
-        width: 300px;
-        height: 300px;
     }
 }
 
