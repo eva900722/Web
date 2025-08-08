@@ -560,6 +560,11 @@ footer {
         /* 左右兩端對齊 */
     }
 
+    .contact-text {
+        padding-left: 20px;
+        /* ✅ 原本是 50px，改小一點 */
+    }
+
     .line-qr {
         width: 100%;
         text-align: center;
@@ -580,7 +585,8 @@ footer {
     .contact-map-embed iframe {
         width: 90%;
         max-width: 400px;
-        border-radius: 8px;
+        width: 300px;
+        height: 300px;
     }
 }
 
