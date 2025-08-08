@@ -636,3 +636,11 @@ footer {
         /* 調整 padding 大小 */
     }
 }
+
+@media (min-width: 769px) {
+    .qr-code,
+    .contact-map-embed {
+        margin-left: 30px;
+        /* 或你想要的距離 */
+    }
+}
