@@ -586,6 +586,10 @@ footer {
         margin-bottom: 0px;
     }
 
+    .contact-map {
+        gap: 10px !important;
+    }
+
     .line-qr {
         width: 100%;
         display: flex;
