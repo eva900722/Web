@@ -580,19 +580,21 @@ footer {
     }
 
     .contact-text {
-        padding-left: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 10px;
     }
 
     .line-qr {
-        margin-top: 8px;
         width: 100%;
-        margin-top: 10px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
     }
 
     .line-qr img {
-        margin: 0 auto;
-        display: block;
+        max-width: 80%;
+        height: auto;
     }
 
     /* ✅ Google 地圖 iframe 區塊置中 */
