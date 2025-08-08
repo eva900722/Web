@@ -569,6 +569,19 @@ footer {
         margin: 0 auto;
         display: block;
     }
+
+    /* ✅ Google 地圖 iframe 區塊置中 */
+    .contact-map-embed {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-map-embed iframe {
+        width: 90%;
+        max-width: 400px;
+        border-radius: 8px;
+    }
 }
 
 /* ========= 輪播圖響應式設計 ========= */
