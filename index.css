@@ -521,7 +521,7 @@ footer {
         /* 初始隱藏於右側畫面外 */
         width: 60vw;
         /* 選單寬度 */
-        max-width: 250px;
+        max-width: 50px;
         height: 100vh;
         /* 滿版高度 */
         background-color: #002244;
