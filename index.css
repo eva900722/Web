@@ -313,7 +313,9 @@ body {
 }
 
 .categories-partner .category {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
     background: #eaeaea;
     border-radius: 8px;
     text-align: center;
@@ -321,12 +323,11 @@ body {
 }
 
 .categories-partner .category img {
-    width: 100%;
-    /* 圖片滿寬 */
-    height: 180px;
-    /* 固定高度 */
+    width: 80%;
+    height: 160px;
     object-fit: contain;
-    /* 裁切填滿 */
+    display: block;
+    margin: 10px auto;
     border-radius: 6px;
     /* 圓角 */
     margin-top: 10px;
@@ -693,5 +694,25 @@ footer {
         /* 縮小箭頭尺寸 */
         padding: 8px 12px;
         /* 調整 padding 大小 */
+    }
+}
+
+/* ========= 合作夥伴響應式設計 ========= */
+@media (max-width: 768px) {
+    .categories-partner .container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 手機改為2欄 */
+    }
+
+    .categories-partner .category {
+        width: 100%;
+        /* 不再強制 300px */
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-partner .container {
+        grid-template-columns: repeat(1, 1fr);
+        /* 螢幕很小時用1欄 */
     }
 }
