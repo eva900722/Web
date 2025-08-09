@@ -116,11 +116,156 @@ body {
     /* 滑鼠懸停時顏色變化過渡效果 */
 }
 
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* ✅ 將每塊 message-box 水平置中 */
+    gap: 40px;
+    /* ✅ 區塊之間距離大一點 */
+    padding: 50px 20px;
+    /* ✅ 上下左右留白空間 */
+    max-width: 1100px;
+    /* ✅ 設定最大寬度 */
+    margin: 0 auto;
+    /* ✅ 水平置中 chat-section */
+}
+
+.message-box {
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* ✅ 不再兩端對齊，改為靠左（或靠右） */
+    gap: 30px;
+    /* ✅ 設定圖片與 bubble 間距 */
+    background-color: #eee;
+    border-radius: 0px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message-box.left {
+    flex-direction: row;
+}
+
+.message-box.right {
+    flex-direction: row-reverse;
+}
+
+.avatar-box {
+    width: 250px;
+    /* ✅ 外框寬度 */
+    height: 250px;
+    /* ✅ 外框高度 */
+    background-color: white;
+    /* ✅ 背景白色，讓圖片底透明區不會透出底色 */
+    border: 2px solid #ccc;
+    /* ✅ 灰色邊框 */
+    display: flex;
+    /* ✅ 使用 flex，讓圖片置中 */
+    align-items: center;
+    /* ✅ 垂直置中 */
+    justify-content: center;
+    /* ✅ 水平置中 */
+    margin: 0 2px;
+    /* ✅ 左右間距 20px，讓圖片與對話框有空隙 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    /* ✅ 加上陰影讓框更立體 */
+}
+
+.avatar {
+    width: 100%;
+    /* ✅ 圖片寬度 */
+    height: 100%;
+    /* ✅ 圖片高度 */
+    object-fit: cover;
+    /* ✅ 等比例裁切填滿，圖片不會被拉伸變形 */
+    border-radius: 0;
+    /* ✅ 無圓角（保留方形外觀） */
+}
+
+.message-box.left .bubble {
+    text-align: left;
+}
+
+.message-box.right .bubble {
+    text-align: right;
+}
+
+.bubble {
+    width: 700px;
+    /* ✅ 寬度 */
+    height: 200px;
+    /* ✅ 高度 */
+    background-color: #fff;
+    padding: 18px 24px;
+    border-radius: 20px;
+    font-size: 24px;
+    max-width: 700px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.message-box.left .bubble::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-right: 22px solid #ccc;
+    /* 外層「邊框」顏色 */
+}
+
+.message-box.left .bubble::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    /* 相對略靠內，形成邊框效果 */
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 20px solid #fff;
+    /* 泡泡背景色 */
+}
+
+.message-box.right .bubble::before {
+    content: "";
+    position: absolute;
+    right: -22px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 22px solid #ccc;
+    /* 外層邊框色 */
+}
+
+.message-box.right .bubble::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid #fff;
+    /* 泡泡背景色 */
+}
+
 /* ========= 版權區塊 ========= */
 .copyright {
-    background-color: #fff;
+    background-color: #000000;
     /* 白底 */
-    color: #333;
+    color: #ffffff;
     /* 字色深灰 */
     text-align: center;
     /* 置中對齊 */
@@ -177,25 +322,31 @@ body {
         /* 顯示漢堡按鈕 */
     }
 
+    .navbar .logo {
+        margin-left: 15px !important;
+        /* 改小一點 */
+    }
+
     .menu {
         position: absolute;
-        /* 絕對定位 */
+        /* 固定選單位置 */
         top: 0;
-        /* 貼齊頂部 */
+        /* 從畫面頂部開始 */
         right: -300px;
-        /* 隱藏在畫面右邊外 */
-        width: 100px;
+        /* 初始隱藏於右側畫面外 */
+        width: 60vw;
         /* 選單寬度 */
+        max-width: 110px;
         height: 100vh;
-        /* 高度為整個螢幕 */
+        /* 滿版高度 */
         background-color: #002244;
-        /* 深藍背景 */
+        /* 背景色深藍 */
         padding-top: 60px;
-        /* 上方留空，避免蓋到 Logo */
-        transition: right 0.3s;
-        /* 開關動畫 */
+        /* 上方留白以避開 logo */
+        transition: right 0.3s ease;
+        /* 滑出動畫 */
         z-index: 1000;
-        /* 層級低於 menu-toggle */
+        /* 層級設定 */
     }
 
     .menu.open {
@@ -222,5 +373,42 @@ body {
         /* 導覽主容器仍橫排 */
         justify-content: space-between;
         /* 左右對齊 */
+    }
+}
+
+/* ========= 響應式：留言區調整 ========= */
+@media (max-width: 768px) {
+    .chat-section {
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .message-box {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .avatar-box {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .bubble {
+        width: 100%;
+        max-width: 100%;
+        font-size: 18px;
+        height: auto;
+    }
+
+    .message-box.left .bubble::before,
+    .message-box.left .bubble::after,
+    .message-box.right .bubble::before,
+    .message-box.right .bubble::after {
+        display: none;
     }
 }
