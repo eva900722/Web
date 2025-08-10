@@ -8,6 +8,10 @@
     /* 設定 box-sizing 為 border-box，使寬高包含 padding 與 border */
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
 
 /* ========= 全域設定 ========= */
 body {
@@ -357,23 +361,44 @@ body {
 
     .nav-links {
         flex-direction: column;
-        /* 導覽項目改為直排 */
+        /* 導覽列改為直排 */
         gap: 20px;
-        /* 項目間距 */
+        /* 每項間距 */
         padding: 0 20px;
-        /* 左右內距 */
+        /* 內距避免文字貼邊 */
     }
 
     .nav-links li {
         padding: 10px 0;
-        /* 上下內距 */
+        /* 垂直內距方便點擊 */
     }
 
     .navbar .container {
         flex-direction: row;
-        /* 導覽主容器仍橫排 */
+        /* 主容器維持橫向排列 */
         justify-content: space-between;
-        /* 左右對齊 */
+        /* 左右兩端對齊 */
+    }
+}
+
+/* ========= 響應式設計 ========= */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        /* 導覽列主容器改為直向排列 */
+        align-items: flex-start;
+        /* 導覽列內部元素靠左 */
+        position: relative;
+        /* 漢堡選單以此為定位基準 */
+    }
+
+    .navbar nav .nav-links {
+        flex-direction: column;
+        /* 導覽連結改為縱向排列 */
+        padding-left: 0;
+        /* 左邊距設為 0 */
+        padding-right: 0;
+        /* 右邊距設為 0 */
     }
 }
 
