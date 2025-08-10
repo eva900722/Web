@@ -36,8 +36,37 @@
 
     <!-- ✅ 第二頁內容區塊 -->
     <main class="container" style="padding: 40px 0;"> <!-- 主內容區塊，包含頁面主要內容 -->
-        <h1>這是第五分頁</h1> <!-- 標題 -->
-        <p>在這裡新增你自己的內容</p> <!-- 說明文字，可放自定內容 -->
+        <div class="chat-section">
+
+            <!-- 右圖左文字 -->
+            <div class="message-box right">
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">這是右邊圖片 ＋ 左邊對話框</div>
+            </div>
+
+            <!-- 左圖右文字 -->
+            <div class="message-box left">
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">這是左邊圖片 ＋ 右邊對話框</div>
+            </div>
+            <div class="message-box right">
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="右圖">
+                </div>
+                <div class="bubble">這是右邊圖片 ＋ 左邊對話框</div>
+            </div>
+
+            <div class="message-box left">
+                <div class="avatar-box">
+                    <img class="avatar" src="images/erp.png" alt="左圖">
+                </div>
+                <div class="bubble">這是左邊圖片 ＋ 右邊對話框</div>
+            </div>
+        </div>
     </main>
 
     <!-- JavaScript 區塊：控制漢堡選單開關 -->
@@ -47,6 +76,9 @@
             menu.classList.toggle('open'); // 切換 open 類別（若有就移除，沒有就加上）
         }
     </script>
+    <div class="copyright"> <!-- 設定版權區 -->
+        © 2025 贊耀資訊有限公司 所有權利均予保留。 <!-- 版權文字 -->
+    </div>
 
 </body> <!-- 結束 body 區塊 -->
 

@@ -121,6 +121,27 @@ body {
     /* 滑鼠懸停時顏色變化過渡效果 */
 }
 
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #1e3a5f; /* 深藍色，與導覽列呼應 */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
 .chat-section {
     display: flex;
     flex-direction: column;
