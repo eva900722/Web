@@ -8,10 +8,6 @@
     /* 設定 box-sizing 為 border-box，使寬高包含 padding 與 border */
 }
 
-html,
-body {
-    overflow-x: hidden;
-}
 
 /* ========= 全域設定 ========= */
 body {
