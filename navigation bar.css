@@ -373,6 +373,11 @@ body {
         /* 垂直內距方便點擊 */
     }
 
+    .nav-links a {
+        padding-left: 5px;
+        /* 左側距離，可依需求調整 */
+    }
+
     .navbar .container {
         flex-direction: row;
         /* 主容器維持橫向排列 */

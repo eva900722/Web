@@ -602,6 +602,11 @@ footer {
         /* 內距避免文字貼邊 */
     }
 
+    .nav-links a {
+        padding-left: 5px;
+        /* 左側距離，可依需求調整 */
+    }
+
     .nav-links li {
         padding: 10px 0;
         /* 垂直內距方便點擊 */
