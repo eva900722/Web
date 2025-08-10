@@ -250,6 +250,33 @@ body {
     /* 靠右 */
 }
 
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: -20px 0 20px 0;
+    color: #000000;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 6px;
+    background-color: #002244;
+    /* 深藍色，與導覽列呼應 */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-header {
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+
 /* ========= 產品分類區塊 ========= */
 .categories {
     padding: 40px 0;
