@@ -288,7 +288,7 @@ body {
     /* 圖片滿寬 */
     height: 200px;
     /* 固定高度 */
-    object-fit: cover;
+    object-fit: contain;
     /* 裁切填滿 */
     border-radius: 6px;
     /* 圓角 */
@@ -501,6 +501,14 @@ footer {
     .category {
         flex: 1 1 100%;
         /* 單列顯示每個分類卡片 */
+    }
+
+    .category img {
+        height: auto;
+        /* 高度自動 */
+        aspect-ratio: 16 / 9;
+        /* 統一圖片比例為 16:9 */
+        object-fit: contain;
     }
 
     .contact-map {
