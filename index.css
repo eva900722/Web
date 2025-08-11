@@ -115,6 +115,10 @@ body {
     /* 顏色變化動畫 */
 }
 
+.logo-img {
+    height: 60px;
+}
+
 .navbar .nav-links li a:hover {
     color: #00bfff;
     /* 滑鼠懸停變藍色 */
@@ -496,6 +500,10 @@ footer {
 
 /* ========= 響應式設計 ========= */
 @media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+    }
+
     .navbar .container {
         flex-direction: column;
         /* 導覽列主容器改為直向排列 */

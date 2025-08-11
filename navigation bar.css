@@ -85,6 +85,10 @@ body {
     /* 靠左內距 */
 }
 
+.logo-img {
+    height: 60px;
+}
+
 /* ========= 導覽連結容器 ========= */
 .navbar nav .nav-links {
     list-style: none;
@@ -360,6 +364,10 @@ body {
 
 /* ========= 響應式設計：手機版樣式 ========= */
 @media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+    }
+
     .menu-toggle {
         display: block;
         /* 顯示漢堡按鈕 */

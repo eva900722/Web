@@ -85,6 +85,10 @@ body {
     /* 靠左內距 */
 }
 
+.logo-img {
+    height: 60px;
+}
+
 /* ========= 導覽連結容器 ========= */
 .navbar nav .nav-links {
     list-style: none;
@@ -313,6 +317,10 @@ body {
 
 /* ========= 響應式設計 ========= */
 @media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+    }
+
     .navbar .container {
         flex-direction: column;
         /* 導覽列主容器改為直向排列 */
