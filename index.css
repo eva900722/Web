@@ -747,6 +747,25 @@ footer {
 
 /* ========= 合作夥伴響應式設計 ========= */
 @media (max-width: 768px) {
+    .section-title {
+        font-size: 30px;
+    }
+
+    .section-title::after {
+        width: 50px;
+        /* ↓ 變窄 */
+        height: 5px;
+        /* ↓ 變細 */
+        margin-top: 6px;
+        /* ↓ 與文字距離變小 */
+    }
+
+    .section-header {
+        text-align: center;
+        margin: 30px 0 30px 0;
+    }
+
+
     .categories-partner .container {
         grid-template-columns: repeat(2, 1fr);
         /* 手機改為2欄 */
