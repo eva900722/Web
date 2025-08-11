@@ -17,8 +17,6 @@ body {
 body {
     font-family: "Segoe UI", sans-serif;
     /* 設定全站字型為 Segoe UI */
-    background: #f4f4f4;
-    /* 設定背景顏色為淺灰 */
     color: #333;
     /* 預設文字顏色為深灰 */
 }
@@ -283,7 +281,7 @@ body {
 
 /* ========= 產品分類區塊 ========= */
 .categories {
-    padding: 40px 0;
+    padding: 50px 0;
     /* 上下間距 */
     background: white;
     /* 白色背景 */
@@ -403,7 +401,7 @@ footer {
     /* 白字 */
     padding: 20px;
     /* 內距 */
-    margin-top: 0;
+    margin-top: 10px;
     /* ✅ 確保本身無額外 margin */
     border-top: 1px solid #111;
     /* ✅ 加上邊框避免白縫視覺 */
