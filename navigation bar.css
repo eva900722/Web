@@ -164,7 +164,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* ✅ 將每塊 message-box 水平置中 */
-    gap: 40px;
+    gap: 50px;
     /* ✅ 區塊之間距離大一點 */
     padding: 50px 20px;
     /* ✅ 上下左右留白空間 */
