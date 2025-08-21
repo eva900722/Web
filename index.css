@@ -125,13 +125,11 @@ body {
 /* ========= 輪播圖區塊 ========= */
 .carousel {
     width: 100%;
-    /* 寬度滿版 */
-    height: 400px;
-    /* 高度固定為400px */
+    aspect-ratio: 5 / 1;
     overflow: hidden;
-    /* 超出範圍隱藏 */
     position: relative;
-    /* 相對定位給箭頭與點用 */
+    background: #000;
+    /* 預設黑底，避免留白 */
 }
 
 .carousel-container {
@@ -168,7 +166,7 @@ body {
     /* 圖片寬度滿版 */
     height: 100%;
     /* 圖片高度滿版 */
-    object-fit: cover;
+    object-fit: contain;
     /* 等比例裁切鋪滿 */
 }
 
