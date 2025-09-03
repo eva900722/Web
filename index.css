@@ -272,9 +272,27 @@ body {
     border-radius: 2px;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #002244;
+}
+
 .section-header {
     text-align: center;
-    margin: 50px 0 50px 0;
+    font-weight: bold;
+    margin: 30px 0 0 0;
+}
+
+.underline::after {
+    width: 200px;
+}
+
+.title-partner {
+    margin-top: 4px;
+    margin-bottom: 70px;
 }
 
 /* ========= 產品分類區塊 ========= */
